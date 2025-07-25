@@ -3,9 +3,9 @@ export const themeConfig = {
   // 站点信息
   siteMeta: {
     // 站点标题
-    title: "Curve",
+    title: "欢迎来到这个大蒟蒻的 blog",
     // 站点描述
-    description: "Hello World",
+    description: "只是一个随笔 blog 罢了",
     // 站点logo
     logo: "/images/logo/logo.webp",
     // 站点地址
@@ -357,8 +357,8 @@ export const themeConfig = {
       enable: true,
       // 倒计时日期
       data: {
-        name: "春节",
-        date: "2025-01-29",
+        name: "开学",
+        date: "2025-09-01",
       },
     },
     // 站点数据
