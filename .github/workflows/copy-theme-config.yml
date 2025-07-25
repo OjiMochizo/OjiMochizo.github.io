@@ -1,0 +1,23 @@
+name: Copy Theme Config
+on:
+  push:
+    branches: [ main ]  # 只在 main 分支推送时触发
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Copy themeConfig.mjs to root
+        run: |
+          cp .vitepress/theme/assets/themeConfig.mjs ./themeConfig.mjs
+          
+      - name: Commit and push the copied file
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add themeConfig.mjs
+          git commit -m "chore: copy themeConfig.mjs to root" || echo "No changes to commit"
+          git push
